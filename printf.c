@@ -14,8 +14,6 @@ int _printf(const char *format, ...)
 	print form_func[] =
 	{
 		{"c", printf_char},
-		{"i", printf_int},
-		{"d", printf_int},
 		{"s", printf_string}
 	};
 
