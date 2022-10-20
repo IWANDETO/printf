@@ -10,6 +10,6 @@ void printf_char(va_list arg)
 	char character;
 
 	character = va_arg(arg, int);
-	printf("%c", character);
+	_putchar("%c", character);
 }
 

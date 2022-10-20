@@ -9,7 +9,10 @@
 void printf_string(va_list arg)
 {
 	char *string;
+	int i = 0;
 
 	string = va_arg(arg, char *);
-	printf("%s", string);
+
+	for (; i != "\0"; i++)
+	_putchar("%s", string);
 }
