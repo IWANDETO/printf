@@ -5,7 +5,7 @@
 typedef struct print
 {
 	char *symbol;
-	void(*prints)(va_list arg);
+	int (*prints)(va_list arg);
 
 }print;
 
