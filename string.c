@@ -11,4 +11,5 @@ void printf_string(va_list arg)
 	char *string;
 
 	string = va_arg(arg, char *);
+	printf("%s", string);
 }

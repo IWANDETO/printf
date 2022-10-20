@@ -10,10 +10,10 @@ typedef struct print
 }print;
 
 int _putchar(char c);
-int printf_char(va_list arg);
-int printf_int(va_list arg);
-int printf_dec(va_list arg);
-int printf_string(va_list arg);
+void printf_char(va_list arg);
+void printf_int(va_list arg);
+void printf_dec(va_list arg);
+void printf_string(va_list arg);
 int _printf(const char *format, ...);
 
 
