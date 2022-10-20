@@ -13,6 +13,6 @@ void printf_string(va_list arg)
 
 	string = va_arg(arg, char *);
 
-	for (; i != "\0"; i++)
-	_putchar("%s", string);
+	for (; string[i] != "\0"; i++)
+	_putchar(string[i]);
 }

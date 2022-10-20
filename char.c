@@ -7,9 +7,6 @@
 
 void printf_char(va_list arg)
 {
-	char character;
-
-	character = va_arg(arg, int);
-	_putchar("%c", character);
+	_putchar(va_arg(arg, int));
 }
 
