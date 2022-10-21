@@ -3,16 +3,15 @@
 /**
  * _printf - This function prints out characters to the standart output
  * print form_func -Multidimensional array
- *
- * Return; Returns number of characters printed
+ * @format: last known argument
+ * Return: Returns zero
  */
 
 int _printf(const char *format, ...)
 {
 	va_list arg;
 	int i, j;
-	print form_func[] =
-	{
+	print form_func[] = {
 		{"c", printf_char},
 		{"s", printf_string}
 	};

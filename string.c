@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_char - This function prints a character
+ * printf_string - This function prints a string
  * @arg: Points to character to be printed
  * Return: Returns nothing
  */
