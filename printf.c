@@ -25,26 +25,29 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 		i++;
 	}
-	for (j = 0; print[j].symbol != NULL; j++)
+	for (j = 0; form_func[j].symbol != NULL; j++)
 	{
-		if (format[i + 1] == print[j].symbol[0])
+		if (format[i + 1] == form_func[j].symbol[0])
 		{
-			count = print[j].prints(va_list arg);
+			count = print[j].form_func(arg);
 			if (count == -1)
 				return (-1);
 			total_count += count;
 			break;
 		}
 	}
-	if (print[j].symbol == NULL && format[i + 1] != ' ')
+	if (form_func[j].symbol == NULL && format[i + 1] != ' ')
 	{
-		return (-1);
-	while (format[i] != '%')
-	{
-		_putchar(format[i]);
-		i++;
+		if (format[i + 1] != '\0')
+		{
+			_putchar(format[i];
+			_putchar(format[i + 1];
+			total_count = total_count + 2;
+		}
+		else
+			return (-1);
 	}
-	}
+		i = i + 1;
 	}
 	va_end(arg);
 	return (total_count);
