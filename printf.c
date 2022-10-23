@@ -17,15 +17,14 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(arg, format);
-	
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
-			while( format[i] != '%' )
-				{
+			while (format[i] != '%')
+			{
 					_putchar(format[i]);
 						i++;
-				}
-		
+			}
 		while (format && (*(format + i)))
 		{
 		j = 0;
@@ -37,7 +36,6 @@ int _printf(const char *format, ...)
 			{
 			form_func[j].prints(arg);
 			}	
-
 			i++;
 		}
 	}
