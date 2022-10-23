@@ -17,21 +17,31 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(arg, format);
-
-	while (format && (*(format + i)))
+	
+	for (i = 0; format[i] != '\0'; i++)
 	{
+			while( format[i] != '%' )
+				{
+					_putchar(format[i]);
+						i++;
+				}
+		
+		while (format && (*(format + i)))
+		{
 		j = 0;
 
-		while (j < 4 && (*(format + i) != *(form_func[j].symbol)))
+			while (j < 4 && (*(format + i) != *(form_func[j].symbol)))
 			j++;
 
-		if (j < 4)
-		{
+			if (j < 4)
+			{
 			form_func[j].prints(arg);
-		}
+			}	
 
-		i++;
+			i++;
+		}
 	}
 	va_end(arg);
 	return (0);
 }
+
