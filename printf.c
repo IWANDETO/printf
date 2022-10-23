@@ -20,11 +20,11 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-			while (format[i] != '%')
-			{
-					_putchar(format[i]);
-						i++;
-			}
+		while (format[i] != '%')
+		{
+			_putchar(format[i]);
+			i++;
+		}
 		while (format && (*(format + i)))
 		{
 		j = 0;
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			if (j < 4)
 			{
 			form_func[j].prints(arg);
-			}	
+			}
 			i++;
 		}
 	}
