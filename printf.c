@@ -1,17 +1,14 @@
 #include "main.h"
-#/**
+/**
  * _printf - This function prints out characters to the standart output
-p*print form_func -Multidimensional array
+ *print form_func -Multidimensional array
  * @format: last known argument
  * Return: Returns zero
  */
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int i, j;
-	int count;
-	int total_count = 0;
-
+	int i, j, count, total_count = 0;
 	print form_func[] = {
 		{"c", printf_char},
 		{"s", printf_string}
