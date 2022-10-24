@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i + 1] == form_func[j].symbol[0])
 		{
-			count = form_func[j].prints(va_list arg);
+			count = form_func[j].prints(arg);
 			if (count == -1)
 				return (-1);
 			total_count += count;
