@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	print form_func[] = {
 		{"c", printf_char},
 		{"s", printf_string},
+		{"%", print_percent},
 		{NULL, NULL}
 	};
 	va_start(arg, format);
