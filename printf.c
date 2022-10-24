@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	print form_func[] = {
 		{"c", printf_char},
 		{"s", printf_string},
-		{NULL, NULL}
 	};
 	va_start(arg, format);
 	for (i = 0; format[i] != '\0'; i++)
