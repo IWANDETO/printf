@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		if (format[i + 1] != '\0')
 		{
 			_putchar(format[i]);
-			_putchar(format[i + 1];
+			_putchar(format[i + 1]);
 			total_count = total_count + 2;
 		}
 		else
