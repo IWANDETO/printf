@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int i, j, count = 0, total_count = 0;
+	int i, j, count, total_count = 0;
 	print form_func[] = {
 		{"c", printf_char},
 		{"s", printf_string}
@@ -25,6 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i + 1] == form_func[j].symbol[0])
 		{
+			count = form_func[j].prints(va_list arg);
 			if (count == -1)
 				return (-1);
 			total_count += count;
